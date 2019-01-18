@@ -9,7 +9,10 @@ var addLi = function () {
     selectUl.appendChild(li)
     li.textContent = count
     count++
-    //test 222
+    if (count % 3 === 0) {
+
+    }
+
 }
 
 
