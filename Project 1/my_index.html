@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+    <style>
+        button {
+            display: block;
+            margin: 30px auto;
+        }
+
+        div {
+
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            margin: 5px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .circle {
+            background-color: aqua;
+            border-radius: 50%;
+            color: blueviolet;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Utworz element</button>
+    <script>
+        // pobieranie przycisku do zmiennej querySelector pobiera tylko pierwszy przycisk
+        var btn = document.querySelector('button');
+        //tworzenie licznika klikniec
+        var number = 1;
+        //funkcja tworzaca nowe elementy div
+        var addElement = function () {
+            // if (number == 5) {
+            //     div.setAttribute('circle')
+            // } else {
+            var div = document.createElement('div');
+
+            document.body.appendChild(div);
+            div.textContent = number;
+
+
+            if (number % 5 == 0) {
+                div.classList.add('circle');
+                //div.setAttribute('class', 'circle')
+            }
+            number = number + 1;
+        }
+
+
+        btn.addEventListener('click', addElement);
+    </script>
+
+</body>
+
+</html>
