@@ -12,7 +12,7 @@ var addLi = function () {
     if (count % 3 === 0) {
         li.classList.add('big');
     }
-    count++
+    //count++
 }
 
 
