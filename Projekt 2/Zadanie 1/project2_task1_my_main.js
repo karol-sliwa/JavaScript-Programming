@@ -1,8 +1,6 @@
-console.log('ok')
-
 var squere = document.createElement('div');
 document.body.appendChild(squere);
-var a = '100px'
+//var a = '100px'
 var squereSize = 10;
 squere.style.height = squereSize + 'px';
 squere.style.width = squereSize + 'px';
@@ -27,7 +25,7 @@ window.addEventListener('scroll', function () {
 
     }
     //jezeli grow rowne true (czyli ==0) zacznij zwiekszac
-    if (grow === true) {
+    if (grow) {
         console.log('jestem w drugim ifie')
         squereSize += 5
         squere.style.width = squereSize + 'px';
