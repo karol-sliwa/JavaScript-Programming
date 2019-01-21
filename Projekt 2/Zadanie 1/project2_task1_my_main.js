@@ -8,10 +8,10 @@ squere.style.height = squereSize + 'px';
 squere.style.width = squereSize + 'px';
 
 squere.style.backgroundColor = 'red';
-document.body.style.backgroundColor = 'blue'
+document.body.style.backgroundColor = 'grey'
 var grow = true;
 
-console.log(grow);
+//console.log(grow);
 
 window.addEventListener('scroll', function () {
     //jezeli squerSize jest wieksze niz polowa strony ustaw false i przejdz dalej
