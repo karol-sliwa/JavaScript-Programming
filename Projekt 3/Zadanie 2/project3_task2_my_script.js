@@ -13,8 +13,17 @@ console.log('ok')
 
 // --- funkcja createLiElements, która będzie uruchamiana po kliknięciu przycisku stworzonego przez funkcję init. Jej zadanie to:
 
+// --- tworzenie 10 elementów li i umieszczanie ich w elemencie ul
+// --- kazdy z 10 elementów ma mieć swój indeks (order) pczy czym kolejne 10 elementów ma być konynuacją (czilu pierwszy klik mamy 1-10, kolejny 11-20 itd)
+// --- każdy kolejny element il ma mieć font-size większy o 1px.
+
+// - bez zmian w pliku html (nie dodajemy html-a i css-a). //Cały kod piszemy w elemencie main;
+
+
+
 var size = 10
 var orderOfElement = 1;
+
 var init = function () {
     var button1 = document.createElement('button');
     button1.textContent = 'Dodaj 10 elementów listy';
@@ -22,13 +31,27 @@ var init = function () {
     document.body.appendChild(button1);
     var uls = document.createElement('ul')
     document.body.appendChild(uls)
+
+    var reset = document.createElement('button')
+    reset.textContent = 'Reset';
+    reset.style.fontSize = '20px'
+    document.body.appendChild(reset);
+
     button1.addEventListener('click', createElement);
+    reset.addEventListener('click', resetFunction);
+}
+
+//reset button 
+var resetFunction = function () {
+    document.querySelector('ul').textContent = '';
+    orderOfElement = 1
+    size = 10;
 }
 
 var createElement = function () {
     console.log('in created element')
 
-    for (i = 0; i <= 10; i++) {
+    for (i = 1; i <= 10; i++) {
         var lis = document.createElement('li')
         lis.textContent = 'Element nr ' + orderOfElement;
         var uls = document.querySelector('ul');
@@ -37,7 +60,7 @@ var createElement = function () {
         size++
         lis.style.fontSize = size + 'px'
     }
-    // size = size + 1 + 'px';
+
 
 };
 
@@ -45,13 +68,3 @@ var createElement = function () {
 
 
 init();
-
-
-
-
-
-// --- tworzenie 10 elementów li i umieszczanie ich w elemencie ul
-// --- kazdy z 10 elementów ma mieć swój indeks (order) pczy czym kolejne 10 elementów ma być konynuacją (czilu pierwszy klik mamy 1-10, kolejny 11-20 itd)
-// --- każdy kolejny element il ma mieć font-size większy o 1px.
-
-// - bez zmian w pliku html (nie dodajemy html-a i css-a). Cały kod piszemy w elemencie main.js
