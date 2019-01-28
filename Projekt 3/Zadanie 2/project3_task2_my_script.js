@@ -47,7 +47,8 @@ var resetFunction = function () {
     orderOfElement = 1
     size = 10;
 }
-//testing
+
+//adding li elements to the us tag
 var createElement = function () {
     console.log('in created element')
 
