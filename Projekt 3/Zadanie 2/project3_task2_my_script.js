@@ -48,7 +48,7 @@ var resetFunction = function () {
     size = 10;
 }
 
-//adding li elements to the us tag
+//adding li elements to the us tags
 var createElement = function () {
     console.log('in created element')
 
