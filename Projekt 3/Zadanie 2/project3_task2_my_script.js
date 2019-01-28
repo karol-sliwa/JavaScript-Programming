@@ -13,31 +13,38 @@ console.log('ok')
 
 // --- funkcja createLiElements, która będzie uruchamiana po kliknięciu przycisku stworzonego przez funkcję init. Jej zadanie to:
 
+var size = 10
+var orderOfElement = 1;
 var init = function () {
-    var button = document.createElement('button');
-    this.button.textContent = 'Dodaj 10 elementów listy';
-    this.body.appendChild(button);
-    //body.appendChild('button');
+    var button1 = document.createElement('button');
+    button1.textContent = 'Dodaj 10 elementów listy';
+    button1.style.fontSize = '25px';
+    document.body.appendChild(button1);
     var uls = document.createElement('ul')
-    this.body.appendChild(uls)
+    document.body.appendChild(uls)
+    button1.addEventListener('click', createElement);
 }
-init();
 
 var createElement = function () {
-    var order
+    console.log('in created element')
 
-    for (i = 1; i <= 10; i++) {
-
+    for (i = 0; i <= 10; i++) {
         var lis = document.createElement('li')
-        lis.textContent = i
-        document.ul.appendChild(lis);
+        lis.textContent = 'Element nr ' + orderOfElement;
+        var uls = document.querySelector('ul');
+        uls.appendChild(lis);
+        orderOfElement++
+        size++
+        lis.style.fontSize = size + 'px'
+    }
+    // size = size + 1 + 'px';
 
-    };
+};
 
 
-}
 
-button.addEventListener('click', createElement);
+
+init();
 
 
 
