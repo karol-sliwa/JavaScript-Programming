@@ -47,7 +47,7 @@ var resetFunction = function () {
     orderOfElement = 1
     size = 10;
 }
-
+//testing
 var createElement = function () {
     console.log('in created element')
 
