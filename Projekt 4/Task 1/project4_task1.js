@@ -14,5 +14,3 @@ document.body.addEventListener('mousemove', function (e) {
     h1.textContent = e.pageX + ', ' + e.pageY;
 
 });
-
-//
