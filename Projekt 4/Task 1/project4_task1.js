@@ -12,7 +12,7 @@ document.body.addEventListener('mousemove', function (e) {
 
     //changing text content of the h1 tag
     //counted from the beginning of the page, when the scroll is on the top
-
+    //
     var x = e.clientX;
     var y = e.clientY;
     var width = window.innerWidth;
